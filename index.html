@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>我的个人网页</title>
+  <style>
+    :root {
+      --bg: #f7f8fc;
+      --card: #ffffff;
+      --primary: #3b82f6;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --radius: 14px;
+      --shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+      color: var(--text);
+      background: linear-gradient(145deg, #eef2ff, var(--bg));
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+
+    .hero {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+
+    h1, h2 { margin: 0 0 12px; }
+    p { margin: 0 0 10px; color: var(--muted); }
+
+    .wechat {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 12px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #eff6ff;
+      color: #1e3a8a;
+      font-weight: 600;
+    }
+
+    .section {
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+    }
+
+    .product {
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 14px;
+      background: #fff;
+    }
+
+    .product h3 { margin: 0 0 8px; font-size: 18px; }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--primary);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 9px;
+      font-weight: 600;
+      transition: transform 0.15s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .downloads,
+    .video-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    iframe,
+    video {
+      width: 100%;
+      border: 0;
+      border-radius: 12px;
+      min-height: 280px;
+      background: #000;
+    }
+
+    footer {
+      text-align: center;
+      color: #9ca3af;
+      font-size: 14px;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <h1>你好，我是你的名字</h1>
+      <p>欢迎来到我的个人网页！这里可以查看我推荐的商品、跳转购买链接、下载我的 PDF 攻略、以及观看我的视频内容。</p>
+      <div class="wechat">📱 微信：your_wechat_id（请替换成你的微信号）</div>
+    </section>
+
+    <section class="section">
+      <h2>商品推荐</h2>
+      <p>以下是我精选的商品，你可以点击按钮直接前往购物链接。</p>
+      <div class="products">
+        <article class="product">
+          <h3>商品 A</h3>
+          <p>适合日常使用，性价比高。</p>
+          <a class="btn" href="https://example.com/product-a" target="_blank" rel="noopener noreferrer">去购买</a>
+        </article>
+        <article class="product">
+          <h3>商品 B</h3>
+          <p>高颜值推荐，送礼自用都不错。</p>
+          <a class="btn" href="https://example.com/product-b" target="_blank" rel="noopener noreferrer">去购买</a>
+        </article>
+        <article class="product">
+          <h3>商品 C</h3>
+          <p>实用型装备，强烈推荐。</p>
+          <a class="btn" href="https://example.com/product-c" target="_blank" rel="noopener noreferrer">去购买</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>PDF 攻略下载</h2>
+      <p>点击下方按钮下载我的 PDF 攻略（将链接替换为你的真实文件地址）。</p>
+      <div class="downloads">
+        <a class="btn" href="https://example.com/my-guide.pdf" download>下载 PDF 攻略</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>视频内容</h2>
+      <p>你可以嵌入 B站/YouTube 视频，或直接播放本地视频文件。</p>
+      <div class="video-box">
+        <iframe
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          title="我的视频"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+
+        <!-- 如果你有本地视频，可启用下面这一段并替换文件路径 -->
+        <!--
+        <video controls>
+          <source src="videos/my-video.mp4" type="video/mp4" />
+          当前浏览器不支持视频播放。
+        </video>
+        -->
+      </div>
+    </section>
+
+    <footer>© 2026 我的个人网页</footer>
+  </div>
+</body>
+</html>
